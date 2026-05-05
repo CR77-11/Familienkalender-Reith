@@ -48,7 +48,7 @@ function render() {
     section.innerHTML = `<div class="period-title">${period}</div>`;
     grouped[period].forEach(event => {
       const item = document.createElement("article");
-      item.className = "event";
+      item.className = event === visibleEvents()[0] ? "event next-highlight" : "event";
       item.innerHTML = `
         <div class="time">${event.time}</div>
         <div>
