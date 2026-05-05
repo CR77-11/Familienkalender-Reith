@@ -80,3 +80,13 @@ h1 { margin: 8px 0 0; font-size: clamp(46px, 6vw, 86px); line-height: .95; lette
   border-radius: 999px;
   margin-left: 12px;
 }
+
+.drive {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a7cff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
