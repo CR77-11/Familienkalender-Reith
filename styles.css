@@ -64,3 +64,19 @@ h1 { margin: 8px 0 0; font-size: clamp(46px, 6vw, 86px); line-height: .95; lette
   .next-bar { display: block; }
   .next-event { text-align: left; margin-top: 8px; }
 }
+
+.next-highlight {
+  border: 2px solid #111;
+  transform: scale(1.01);
+}
+
+.next-highlight::after {
+  content: "Nächster Termin";
+  font-size: 14px;
+  font-weight: 700;
+  background: #111;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-left: 12px;
+}
