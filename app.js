@@ -1,3 +1,14 @@
+async function loadWeather() {
+  const res = await fetch("https://api.open-meteo.com/v1/forecast?latitude=49.317&longitude=8.431&current_weather=true");
+  const data = await res.json();
+
+  const temp = Math.round(data.current_weather.temperature);
+  const wind = data.current_weather.windspeed;
+
+  document.getElementById("weather").innerText =
+    `🌤️ Speyer ${temp}°C · Wind ${wind} km/h`;
+}
+
 const events = [
   { time: "07:30", period: "MORGEN", icon: "🎒", person: "Henri", title: "Schule", category: "Schule", members: ["Henri"], location: "Schule", reminder: "30 Minuten vorher" },
   { time: "08:15", period: "MORGEN", icon: "💼", person: "Christian", title: "Kundentermin", category: "Beruf", members: ["Christian"], location: "Büro", reminder: "15 Minuten vorher" },
@@ -82,3 +93,4 @@ document.getElementById("weatherCard").addEventListener("click", () => {
   alert("Wettermodul: Später kann hier eine echte Wetter-API für Speyer angeschlossen werden.");
 });
 render();
+loadWeather();
